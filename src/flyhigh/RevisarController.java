@@ -21,6 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -230,6 +231,8 @@ public class RevisarController implements Initializable {
                     Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
+                    stage.getIcons().add(new Image("flyhigh/avion.png"));
+                    stage.setTitle("FLYHIGH");
                     stage.setResizable(false);
                     stage.show();
                     final Node source = (Node) event.getSource();

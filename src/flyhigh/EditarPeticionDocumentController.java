@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -125,6 +126,9 @@ public class EditarPeticionDocumentController implements Initializable {
                     Parent root = FXMLLoader.load(getClass().getResource("Reparacion.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
+                    stage.getIcons().add(new Image("flyhigh/avion.png"));
+                    stage.setTitle("FLYHIGH");
+                    stage.setResizable(false);
                     stage.show();
                     final Node source = (Node) event.getSource();
                     final Stage stage2 = (Stage) source.getScene().getWindow();
